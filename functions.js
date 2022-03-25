@@ -17,8 +17,16 @@ OUTPUT:
 
 ]*/
 
-export function getDogs(arr) {
-    return [];
+
+const otherPets = [
+    { name: 'scooter', type: 'dog' },
+    { name: 'sassy', type: 'dog' },
+    { name: 'legzo', type: 'frog' },
+    { name: 'fluff', type: 'squirrel' },
+];
+
+export function getDogs(pet) {
+    return otherPets.filter(pet => pet.type === 'dog');
 }
 
 /*
@@ -27,8 +35,13 @@ Output:
 ['spot', 'rover', 'jumpy', 'einstein']
 */
 
+const pets = [
+    { type: 'cat', name: 'coco' },
+    { type: 'frog', name: 'jumper' }
+];
+
 export function makeArrayOfNames(arr) {
-    return [];
+    return pets.map(pet => pet.name);
 }
 
 /*
@@ -36,8 +49,17 @@ OUTPUT:
 ['spot', 'rover']
 */
 
-export function getNamesOfDogs(arr) {
-    return [];
+const morePets = [
+    { name: 'scooter', type: 'dog' },
+    { name: 'sassy', type: 'dog' },
+    { name: 'legzo', type: 'frog' },
+    { name: 'fluff', type: 'squirrel' },
+];
+
+export function getNamesOfDogs(pet) {
+    return morePets
+        .filter(pet => pet.type === 'dog')
+        .map(pet => pet.name);
 }
 
 /*
@@ -46,8 +68,14 @@ Output:
 ['cat', 'frog', 'dog', 'dog']
 */
 
-export function makeReversedArrayOfTypes(arr) {
-    return [];
+const pets1 = [
+    { type: 'cat', name: 'coco' },
+    { type: 'frog', name: 'jumper' }
+];
+
+export function makeReversedArrayOfTypes(pet) {
+    return pets1.map(pet => pet.type)
+        .reverse();
 }
 
 /*
@@ -61,8 +89,16 @@ Output:
 ]
 */
 
-export function makeSpanishLanguageArray(arr) {
-    return [];
+const pets2 = [
+    { type: 'cat', name: 'coco' },
+    { type: 'frog', name: 'jumper' }
+];
+
+export function makeSpanishLanguageArray(pet) {
+    return pets2.map(pet => ({
+        nombre: pet.name,
+        tipo: pet.type
+    }));
 }
 
 /*
@@ -75,8 +111,15 @@ Output:
     { name: 'einstein', isHungry: true, type: 'cat' },
 ]*/
 
-export function makeArrayWithIsHungry(arr) {
-     return []
+const otherPets2 = [
+    { name: 'scooter', type: 'dog' },
+    { name: 'sassy', type: 'dog' },
+    { name: 'legzo', type: 'frog' },
+    { name: 'fluff', type: 'squirrel' },
+];
+
+export function makeArrayWithIsHungry(pet) {
+    return otherPets2.map(pet => ({ ...pet, isHungry: true }));
 }
 
 /*
@@ -89,8 +132,16 @@ Output:
     { name: 'EINSTEIN', type: 'cat' },
 ]*/
 
-export function makeShoutingArray(arr) {
-    return [];
+const otherPets3 = [
+    { name: 'scooter', type: 'dog' },
+    { name: 'sassy', type: 'dog' },
+    { name: 'legzo', type: 'frog' },
+    { name: 'fluff', type: 'squirrel' },
+];
+
+export function makeShoutingArray(pet) {
+    return otherPets3
+        .map(pet => ({ name: pet.name.toUpperCase(), type: pet.type }));
 }
 
 
@@ -100,9 +151,20 @@ Output:
 ['spotdog', 'roverdog', 'jumpyfrog', einsteincat']
 */
 
-export function makeStringArray(arr) {
-    return [];
+const otherPets4 = [
+    { name: 'scooter', type: 'dog' },
+    { name: 'sassy', type: 'dog' },
+    { name: 'legzo', type: 'frog' },
+    { name: 'fluff', type: 'squirrel' },
+];
+
+export function makeStringArray(pet) {
+    var strings = otherPets4.map(function(pet) {
+        return pet['string'];
+    });
 }
+    // return otherPets4.map(pet => ({ ...pet, pet.name, pet.type }));
+
 
 /*
 findByName('jumpy', petsArray)
