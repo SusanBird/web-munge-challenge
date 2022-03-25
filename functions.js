@@ -151,9 +151,20 @@ Output:
 ['spotdog', 'roverdog', 'jumpyfrog', einsteincat']
 */
 
-export function makeStringArray(arr) {
-    return [];
+const otherPets4 = [
+    { name: 'scooter', type: 'dog' },
+    { name: 'sassy', type: 'dog' },
+    { name: 'legzo', type: 'frog' },
+    { name: 'fluff', type: 'squirrel' },
+];
+
+export function makeStringArray(pet) {
+    var strings = otherPets4.map(function(pet) {
+        return pet['string'];
+    });
 }
+    // return otherPets4.map(pet => ({ ...pet, pet.name, pet.type }));
+
 
 /*
 findByName('jumpy', petsArray)
