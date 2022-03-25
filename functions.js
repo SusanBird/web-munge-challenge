@@ -17,8 +17,16 @@ OUTPUT:
 
 ]*/
 
-export function getDogs(arr) {
-    return [];
+
+const otherPets = [
+    { name: 'scooter', type: 'dog' },
+    { name: 'sassy', type: 'dog' },
+    { name: 'legzo', type: 'frog' },
+    { name: 'fluff', type: 'squirrel' },
+];
+
+export function getDogs(pet) {
+    return otherPets.filter(pet => pet.type === 'dog');
 }
 
 /*
@@ -27,8 +35,13 @@ Output:
 ['spot', 'rover', 'jumpy', 'einstein']
 */
 
+const pets = [
+    { type: 'cat', name: 'coco' },
+    { type: 'frog', name: 'jumper' }
+];
+
 export function makeArrayOfNames(arr) {
-    return [];
+    return pets.map(pet => pet.name);
 }
 
 /*
@@ -36,8 +49,17 @@ OUTPUT:
 ['spot', 'rover']
 */
 
-export function getNamesOfDogs(arr) {
-    return [];
+const morePets = [
+    { name: 'scooter', type: 'dog' },
+    { name: 'sassy', type: 'dog' },
+    { name: 'legzo', type: 'frog' },
+    { name: 'fluff', type: 'squirrel' },
+];
+
+export function getNamesOfDogs(pet) {
+    return morePets
+        .filter(pet => pet.type === 'dog')
+        .map(pet => pet.name);
 }
 
 /*
@@ -76,7 +98,7 @@ Output:
 ]*/
 
 export function makeArrayWithIsHungry(arr) {
-     return []
+    return [];
 }
 
 /*
