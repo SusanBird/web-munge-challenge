@@ -141,7 +141,7 @@ const otherPets3 = [
 
 export function makeShoutingArray(pet) {
     return otherPets3
-        .map(pet => pet.name.toUpperCase());
+        .map(pet => ({ name: pet.name.toUpperCase(), type: pet.type }));
 }
 
 
