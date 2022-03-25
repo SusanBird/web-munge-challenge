@@ -60,14 +60,14 @@ test('should return dogs names', (expect) => {
     expect.deepEqual(actual, expected);
 });
 
-skip('should make a reverse array of type', (expect) => {
+test('should make a reverse array of type', (expect) => {
     const expected = ['frog', 'cat'];
     const actual = makeReversedArrayOfTypes([...pets]);
 
     expect.deepEqual(actual, expected);
 });
 
-skip('should make a spanish array of pet objects', (expect) => {
+test('should make a spanish array of pet objects', (expect) => {
     const expected = [
         {
             nombre: 'coco',
@@ -83,7 +83,7 @@ skip('should make a spanish array of pet objects', (expect) => {
     expect.deepEqual(actual, expected);
 });
 
-skip('should return all objects with an added isHungry property equal to true', (expect) => { 
+test('should return all objects with an added isHungry property equal to true', (expect) => { 
     const expected = [
         { name: 'scooter', isHungry: true, type: 'dog' },
         { name: 'sassy', isHungry: true, type: 'dog' },
@@ -95,7 +95,7 @@ skip('should return all objects with an added isHungry property equal to true', 
     expect.deepEqual(actual, expected);
 });
 
-skip('should return a shouting array', (expect) => {
+test('should return a shouting array', (expect) => {
     const expected = [
         { name: 'SCOOTER', type: 'dog' },
         { name: 'SASSY', type: 'dog' },
